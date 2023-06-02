@@ -1,13 +1,14 @@
-import Header from '@/components/Header'
+'use client'
 import Filters from '@/components/filters/Filters'
 import List from '@/components/list/List'
-import Image from 'next/image'
+import useMediaQuery from '@/hooks/useMediaQuery'
 
 export default function Home() {
-	return (
+	const isMobile = useMediaQuery()
+	return isMobile ? (
 		<>
 			<Filters />
 			<List />
 		</>
-	)
+	) : null
 }

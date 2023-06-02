@@ -2,7 +2,7 @@ import { BuildingOffice2Icon, HomeIcon } from '@heroicons/react/24/solid'
 
 const PropertyTypeFilter = () => {
 	return (
-		<div className='mt-8'>
+		<div>
 			<h2 className='text-center'>Property type</h2>
 			<div className='mt-6 flex w-[240px] gap-4'>
 				<button className='property-type-btn'>

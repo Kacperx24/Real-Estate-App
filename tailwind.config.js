@@ -11,7 +11,7 @@ module.exports = {
 			transparent: 'transparent',
 			// primary: '#efefef',
 			background: '#f5f5f5',
-			primary: '#3A47E4',
+			primary: { main: '#3A47E4', light: '#E0EBFE' },
 			secondary: { main: '#2e2e2e', light: '#686868', extraLight: '#a5a5a5' },
 			border: '#DEDEDE',
 			white: '#ffffff',

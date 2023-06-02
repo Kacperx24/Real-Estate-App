@@ -46,7 +46,7 @@ const MultiRangeInput: FC<MultiRangeInputProps> = ({
 		<div className='w-full'>
 			<div className='relative h-[3px] w-full overflow-hidden rounded bg-[#CFCFCF]'>
 				<div
-					className='absolute left-1/4 right-1/4 h-full rounded bg-primary'
+					className='absolute left-1/4 right-1/4 h-full rounded bg-primary-main'
 					ref={rangeRef}
 				></div>
 			</div>
