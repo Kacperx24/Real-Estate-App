@@ -30,10 +30,10 @@ export default function RootLayout({
 		<html lang='en'>
 			<body className={`${poppins.className} md:max-h-screen`}>
 				<Providers>
-					<div className='mb-12 bg-background text-secondary-main md:mb-0 md:h-screen'>
-						<div className='mx-auto flex h-full max-w-[1536px] flex-col'>
+					<div className='min-h-screen bg-background text-secondary-main md:h-screen'>
+						<div className='mx-auto flex h-screen max-w-[1536px] flex-col'>
 							<Header />
-							<div className='flex min-h-0 flex-grow flex-col md:flex-row'>
+							<div className='flex flex-grow flex-col md:flex-row'>
 								{!isMobile ? (
 									<>
 										<Filters />

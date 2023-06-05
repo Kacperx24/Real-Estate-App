@@ -37,7 +37,7 @@ const AreaFilter = () => {
 			</div>
 			<div className='mb-6 mt-8 flex w-full items-center justify-between'>
 				<MinMaxDisplay type='min' value={minMaxValue.min} />
-				<MinusIcon className='mx-5 h-6 w-6 text-secondary-extraLight' />
+				<MinusIcon className='text-secondary-extralight mx-5 h-6 w-6' />
 				<MinMaxDisplay type='max' value={minMaxValue.max} />
 			</div>
 		</div>

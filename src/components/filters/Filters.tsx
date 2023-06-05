@@ -13,8 +13,6 @@ const Filters = () => {
 	const [filtersAreOpen, setFiltersAreOpen] = useState(false)
 
 	return (
-		// <div className='max-h-full border-border md:border-r-2 '>
-		// 	<div className='mb-4 flex w-full flex-col items-center px-3 pt-8 md:mb-0 md:max-h-full '>
 		<div className='flex flex-col border-border pt-2 md:max-h-full md:w-[300px] md:border-r-2 md:pt-8'>
 			<div className='relative mx-auto mt-4 w-fit md:mt-0'>
 				<h1 className='text-center'>Filters</h1>
@@ -40,7 +38,6 @@ const Filters = () => {
 					<AreaFilter />{' '}
 				</div>
 			) : null}
-			{/* </div> */}
 		</div>
 	)
 }

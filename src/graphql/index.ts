@@ -42,3 +42,24 @@ export const GET_PROPERTIES_FOR_LIST = gql`
 		}
 	}
 `
+
+export const GET_PROPERTY_DATA = gql`
+	query RealEstate($id: ID!) {
+		realEstates(where: { id: $id }) {
+			bathrooms
+			id
+			location
+			purchasePrice
+			rentPrice
+			rooms
+			squareMeters
+			title
+			type
+			description
+			image {
+				id
+				url
+			}
+		}
+	}
+`

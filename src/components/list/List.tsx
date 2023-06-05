@@ -16,7 +16,7 @@ const List = () => {
 				Search results ({data?.realEstates.length})
 			</h2>
 			<div className='mt-6 md:mt-10 md:h-0 md:flex-grow md:overflow-auto md:pr-10'>
-				<div className='flex flex-col items-center gap-4 md:mb-12 md:gap-5'>
+				<div className='mb-12 flex flex-col items-center gap-4 md:gap-5'>
 					{data?.realEstates.map((item: PropertyDataForList) => (
 						<PropertyCard key={item.id} data={item} />
 					))}

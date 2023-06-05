@@ -35,7 +35,7 @@
 		@apply text-base font-semibold;
 	}
 	input {
-		@apply border-b-2 border-transparent  bg-transparent px-1 py-2 text-sm  text-secondary-light outline-none placeholder:text-secondary-extraLight focus:border-border;
+		@apply border-b-2 border-transparent  bg-transparent px-1 py-2 text-sm  text-secondary-light outline-none placeholder:text-secondary-extralight focus:border-border;
 	}
 	button {
 		@apply border-none outline-none;
@@ -96,5 +96,5 @@
 body {
 	color: #2e2e2e;
 	background: #f5f5f5;
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
