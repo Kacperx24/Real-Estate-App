@@ -6,7 +6,7 @@ const Labels: FC<{ rooms: number; squareMeters: number }> = ({
 	rooms,
 	squareMeters,
 }) => (
-	<div className='mt-3 flex flex-wrap gap-2'>
+	<div className='mt-3 flex flex-wrap gap-2 lg:mt-[14px]'>
 		<Label>
 			<HomeIcon className='mb-[1px] h-3 w-3' />
 			<p>{rooms} rooms </p>

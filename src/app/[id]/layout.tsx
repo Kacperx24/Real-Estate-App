@@ -7,8 +7,14 @@ export const metadata = {
 
 const Layout = ({ children }: { children: ReactNode }) => {
 	return (
-		<div className='h-full bg-white p-5 md:w-0 md:flex-grow'>{children}</div>
+		<div className='flex w-0 flex-grow flex-col bg-white md:max-h-full'>
+			<div className='flex flex-col items-center p-5 md:h-0 md:flex-grow md:overflow-auto'>
+				{children}
+			</div>
+		</div>
 	)
 }
 
 export default Layout
+
+// <div className='flex flex-col bg-white p-5 md:max-h-full md:w-0 md:flex-grow'>

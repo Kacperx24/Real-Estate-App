@@ -25,10 +25,9 @@ const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 		description,
 	} = data?.realEstates[0] || {}
 
-	console.log(data, url, location)
-
 	return (
-		<div className='flex flex-col items-center'>
+		<>
+			{' '}
 			<ImageCard url={url} title={title} />
 			<div className='flex flex-col items-center md:mx-5'>
 				<PropertyHeader
@@ -39,7 +38,7 @@ const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 				<DetailsLabels rooms={rooms} squareMeters={squareMeters} />
 				<PropertyDescription description={description} />
 			</div>
-		</div>
+		</>
 	)
 }
 

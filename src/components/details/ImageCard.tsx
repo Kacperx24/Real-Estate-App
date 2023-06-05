@@ -3,8 +3,8 @@ import React, { FC } from 'react'
 
 const ImageCard: FC<{ url: string; title: string }> = ({ url, title }) => {
 	return (
-		<div className='w-full max-w-[720px] overflow-hidden'>
-			<div className='relative h-[50vw] max-h-[400px] w-[90vw] max-w-full overflow-hidden rounded-2xl'>
+		<div className='max-h-[400px] w-full max-w-[720px]'>
+			<div className='relative mx-auto h-[50vw]  w-[90vw] max-w-full overflow-hidden rounded-2xl md:h-auto md:w-full md:pb-[55.55%]'>
 				<Image
 					src={url}
 					fill
