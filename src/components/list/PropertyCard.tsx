@@ -32,7 +32,7 @@ const PropertyCard: FC<{ data: PropertyDataForList }> = ({ data }) => {
 	return (
 		<Link
 			href={`/${id}`}
-			className={`flex h-36 w-11/12 min-w-[320px] max-w-[360px] gap-2 rounded-xl border-[1px] bg-white p-2 pr-6 md:w-96 lg:h-40 lg:max-w-[400px] lg:rounded-2xl ${
+			className={`flex h-36 w-11/12 min-w-[320px] max-w-[360px] gap-2 rounded-xl border-[1px] bg-white p-2 pr-2 md:w-96 md:pr-6 lg:h-40 lg:max-w-[400px] lg:rounded-2xl ${
 				isActive ? 'border-primary-main' : 'border-white'
 			}`}
 		>
