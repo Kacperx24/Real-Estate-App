@@ -1,6 +1,6 @@
 'use client'
 
-import Header from '@/components/Header'
+import Header from '@/components/header/Header'
 import './globals.css'
 import { Inter, Poppins } from 'next/font/google'
 import Providers from '@/components/Providers'

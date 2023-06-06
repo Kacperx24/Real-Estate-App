@@ -22,14 +22,25 @@ const MinMaxDisplay: FC<MinMaxDisplayProps> = ({ type, value }) => {
 }
 
 const PriceFilter = () => {
-	const [minMaxValue, setMinMaxValue] = useState({ min: 2500, max: 7500 })
+	const {
+		updateFilter,
+		filters: { transactionType },
+	} = useFilters()
 
-	const { updateFilter } = useFilters()
+	const [minMaxValue, setMinMaxValue] = useState({ min: 1000, max: 3000 })
 
 	useEffect(() => {
 		updateFilter('minPrice', minMaxValue.min)
 		updateFilter('maxPrice', minMaxValue.max)
 	}, [minMaxValue])
+
+	useEffect(() => {
+		setMinMaxValue(
+			transactionType === 'rent'
+				? { min: 1000, max: 3000 }
+				: { min: 150000, max: 400000 }
+		)
+	}, [transactionType])
 
 	return (
 		<div className='mt-8'>
@@ -38,9 +49,9 @@ const PriceFilter = () => {
 				<MultiRangeInput
 					minMaxValue={minMaxValue}
 					setMinMaxValue={setMinMaxValue}
-					min={500}
-					max={10000}
-					step={100}
+					min={transactionType === 'rent' ? 500 : 80000}
+					max={transactionType === 'rent' ? 5000 : 750000}
+					step={transactionType === 'rent' ? 100 : 10000}
 				/>
 			</div>
 			<div className='mb-6 mt-8 flex w-full items-center justify-between'>
