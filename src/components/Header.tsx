@@ -1,8 +1,17 @@
+'use client'
+
 import React from 'react'
 import { HomeIcon, MagnifyingGlassIcon } from '@heroicons/react/24/solid'
-import Home from '@/app/page'
+import useFilters from '@/hooks/useFilters'
 
 const Header = () => {
+	const {
+		updateFilter,
+		filters: { transactionType },
+	} = useFilters()
+
+	const isRentPrice = transactionType === 'rent'
+
 	return (
 		<header className='flex flex-col items-center gap-7 border-b-2 border-border px-2 py-6 md:flex-row md:px-10'>
 			<div className='md:w-[200px]'>
@@ -18,8 +27,24 @@ const Header = () => {
 				/>
 			</div>
 			<div className='flex gap-4 text-secondary-light md:order-2 md:ml-16 md:w-[540px] md:gap-8'>
-				<p className='text-sm font-medium'>Buy</p>
-				<p className='text-sm font-medium'>Rent</p>
+				<button onClick={() => updateFilter('transactionType', 'buy')}>
+					<p
+						className={`text-sm font-medium ${
+							!isRentPrice ? 'text-primary-main' : ''
+						}`}
+					>
+						Buy
+					</p>
+				</button>
+				<button onClick={() => updateFilter('transactionType', 'rent')}>
+					<p
+						className={`text-sm font-medium ${
+							isRentPrice ? 'text-primary-main' : ''
+						}`}
+					>
+						Rent
+					</p>
+				</button>
 			</div>
 		</header>
 	)

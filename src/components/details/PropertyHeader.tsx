@@ -5,13 +5,13 @@ import { MapPinIcon } from '@heroicons/react/24/solid'
 interface PropertyHeaderProps {
 	title: string
 	location: string
-	rentPrice: number
+	price: number
 }
-
+;``
 const PropertyHeader: FC<PropertyHeaderProps> = ({
 	title,
 	location,
-	rentPrice,
+	price,
 }) => {
 	return (
 		<div className='mx-2 flex w-full items-center justify-between gap-10 pt-5'>
@@ -23,7 +23,7 @@ const PropertyHeader: FC<PropertyHeaderProps> = ({
 				</p>
 			</div>
 			<div className='w-fit'>
-				<PriceLabel price={rentPrice} variant='large' />
+				<PriceLabel price={price} variant='large' />
 			</div>
 		</div>
 	)

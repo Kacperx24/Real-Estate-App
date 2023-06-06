@@ -10,3 +10,14 @@ export interface PropertyDataForList {
 	type: string
 	image: { id: string; url: string }
 }
+
+export interface Filters {
+	title: string
+	transactionType: 'rent' | 'buy'
+	propertyType: 'house' | 'apartment' | ''
+	minPrice: number | null
+	maxPrice: number | null
+	rooms: number[]
+	minArea: number | null
+	maxArea: number | null
+}

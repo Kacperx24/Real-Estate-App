@@ -1,8 +1,9 @@
 'use client'
 
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import MultiRangeInput from '../ui/MultiRangeInput'
 import { MinusIcon } from '@heroicons/react/24/solid'
+import useFilters from '@/hooks/useFilters'
 
 interface MinMaxDisplayProps {
 	type: 'min' | 'max'
@@ -22,6 +23,13 @@ const MinMaxDisplay: FC<MinMaxDisplayProps> = ({ type, value }) => {
 
 const PriceFilter = () => {
 	const [minMaxValue, setMinMaxValue] = useState({ min: 2500, max: 7500 })
+
+	const { updateFilter } = useFilters()
+
+	useEffect(() => {
+		updateFilter('minPrice', minMaxValue.min)
+		updateFilter('maxPrice', minMaxValue.max)
+	}, [minMaxValue])
 
 	return (
 		<div className='mt-8'>

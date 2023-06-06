@@ -5,6 +5,7 @@ import PropertyDescription from '@/components/details/PropertyDescription'
 import PropertyHeader from '@/components/details/PropertyHeader'
 import PriceLabel from '@/components/list/PriceLabel'
 import { GET_PROPERTY_DATA } from '@/graphql'
+import useFilters from '@/hooks/useFilters'
 import { useQuery } from '@apollo/client'
 import { MapPinIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
@@ -13,6 +14,10 @@ import React, { FC } from 'react'
 const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 	const { data, loading } = useQuery(GET_PROPERTY_DATA, { variables: { id } })
 
+	const {
+		filters: { transactionType },
+	} = useFilters()
+
 	if (loading) return <p>Loading...</p>
 
 	const {
@@ -20,6 +25,7 @@ const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 		location,
 		title,
 		rentPrice,
+		purchasePrice,
 		rooms,
 		squareMeters,
 		description,
@@ -33,7 +39,7 @@ const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 				<PropertyHeader
 					title={title}
 					location={location}
-					rentPrice={rentPrice}
+					price={transactionType === 'rent' ? rentPrice : purchasePrice}
 				/>
 				<DetailsLabels rooms={rooms} squareMeters={squareMeters} />
 				<PropertyDescription description={description} />

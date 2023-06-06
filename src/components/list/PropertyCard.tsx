@@ -7,18 +7,23 @@ import React, { FC } from 'react'
 import PriceLabel from './PriceLabel'
 import Labels from './Labels'
 import Link from 'next/link'
+import useFilters from '@/hooks/useFilters'
 
 const PropertyCard: FC<{ data: PropertyDataForList }> = ({ data }) => {
 	const {
 		title,
 		rooms,
 		location,
-		type,
 		image: { id: imageId, url },
 		squareMeters,
 		rentPrice,
+		purchasePrice,
 		id,
 	} = data || {}
+
+	const {
+		filters: { transactionType },
+	} = useFilters()
 
 	const pathname = usePathname()
 
@@ -42,7 +47,9 @@ const PropertyCard: FC<{ data: PropertyDataForList }> = ({ data }) => {
 				/>
 			</div>
 			<div className='w-0 flex-grow p-2 pt-1 lg:p-[10px]'>
-				<PriceLabel price={rentPrice} />
+				<PriceLabel
+					price={transactionType === 'rent' ? rentPrice : purchasePrice}
+				/>
 				<p className='mt-1 text-sm font-medium lg:mt-2 lg:text-[15px]'>
 					{title}
 				</p>
