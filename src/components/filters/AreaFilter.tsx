@@ -22,14 +22,25 @@ const MinMaxDisplay: FC<MinMaxDisplayProps> = ({ type, value }) => {
 }
 
 const AreaFilter = () => {
-	const [minMaxValue, setMinMaxValue] = useState({ min: 50, max: 150 })
+	const [minMaxValue, setMinMaxValue] = useState({ min: 25, max: 500 })
 
-	const { updateFilter } = useFilters()
+	const {
+		updateFilter,
+		filters: { propertyType },
+	} = useFilters()
 
 	useEffect(() => {
 		updateFilter('minArea', minMaxValue.min)
 		updateFilter('maxArea', minMaxValue.max)
 	}, [minMaxValue])
+
+	useEffect(() => {
+		setMinMaxValue(
+			propertyType === 'apartment'
+				? { min: 25, max: 200 }
+				: { min: 25, max: 500 }
+		)
+	}, [propertyType])
 
 	return (
 		<div className='mt-8'>
@@ -39,7 +50,7 @@ const AreaFilter = () => {
 					minMaxValue={minMaxValue}
 					setMinMaxValue={setMinMaxValue}
 					min={25}
-					max={500}
+					max={propertyType === 'apartment' ? 200 : 500}
 					step={5}
 				/>
 			</div>

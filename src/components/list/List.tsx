@@ -33,7 +33,7 @@ const List = () => {
 			</div>
 		)
 	return (
-		<div className='flex w-full max-w-[410px] flex-col border-border pt-8 md:ml-6 md:max-h-full md:border-r-2'>
+		<div className='flex w-full max-w-[410px] flex-col border-border pt-8 md:ml-6 md:max-h-full md:border-r-2 lg:max-w-[430px]'>
 			<h2 className='text-center'>Search results ({filteredData?.length})</h2>
 			<div className='mt-6 md:mt-10 md:h-0 md:flex-grow md:overflow-auto md:pr-10'>
 				<div className='mb-12 flex flex-col items-center gap-4 md:gap-5'>

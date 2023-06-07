@@ -9,14 +9,10 @@ import { GET_PROPERTY_DATA } from '@/graphql'
 import useFilters from '@/hooks/useFilters'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import { useQuery } from '@apollo/client'
-import { ArrowLeftIcon, MapPinIcon } from '@heroicons/react/24/solid'
-import Image from 'next/image'
 import React, { FC } from 'react'
 
 const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 	const { data, loading } = useQuery(GET_PROPERTY_DATA, { variables: { id } })
-
-	const isMobile = useMediaQuery()
 
 	const {
 		filters: { transactionType },

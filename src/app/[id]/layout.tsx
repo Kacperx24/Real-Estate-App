@@ -16,5 +16,3 @@ const Layout = ({ children }: { children: ReactNode }) => {
 }
 
 export default Layout
-
-// <div className='flex flex-col bg-white p-5 md:max-h-full md:w-0 md:flex-grow'>

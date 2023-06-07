@@ -27,7 +27,7 @@ const PriceFilter = () => {
 		filters: { transactionType },
 	} = useFilters()
 
-	const [minMaxValue, setMinMaxValue] = useState({ min: 1000, max: 3000 })
+	const [minMaxValue, setMinMaxValue] = useState({ min: 500, max: 5000 })
 
 	useEffect(() => {
 		updateFilter('minPrice', minMaxValue.min)
@@ -37,8 +37,8 @@ const PriceFilter = () => {
 	useEffect(() => {
 		setMinMaxValue(
 			transactionType === 'rent'
-				? { min: 1000, max: 3000 }
-				: { min: 150000, max: 400000 }
+				? { min: 500, max: 5000 }
+				: { min: 80000, max: 750000 }
 		)
 	}, [transactionType])
 

@@ -62,7 +62,7 @@ export const FilterProvider: FC<{ children: ReactNode }> = ({ children }) => {
 					const price =
 						filters.transactionType === 'rent'
 							? rentPrice * 1000
-							: purchasePrice
+							: purchasePrice * 1000
 
 					if ((minPrice || maxPrice) === null) return true
 					return (minPrice || 0) <= price && (maxPrice || 0) >= price

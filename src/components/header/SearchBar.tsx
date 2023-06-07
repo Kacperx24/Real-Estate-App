@@ -14,7 +14,7 @@ const SearchBar = () => {
 			<input
 				value={title}
 				onChange={e => updateFilter('title', e.target.value)}
-				className='w-[260px] flex-grow'
+				className='w-[260px] flex-grow lg:text-[15px]'
 				placeholder='Search for houses, apartments...'
 			/>
 		</div>
