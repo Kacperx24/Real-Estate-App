@@ -1,6 +1,6 @@
 'use client'
 
-import React, { FC, useEffect, useRef, useState } from 'react'
+import React, { FC, useEffect, useRef } from 'react'
 
 interface MultiRangeInputProps {
 	minMaxValue: { min: number; max: number }

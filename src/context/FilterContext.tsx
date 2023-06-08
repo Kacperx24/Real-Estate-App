@@ -1,3 +1,5 @@
+'use client'
+
 import { Filters, PropertyDataForList } from '@/types'
 import React, { FC, ReactNode, createContext, useState } from 'react'
 

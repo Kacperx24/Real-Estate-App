@@ -1,3 +1,5 @@
+'use client'
+
 import useFilters from '@/hooks/useFilters'
 import { BuildingOffice2Icon, HomeIcon } from '@heroicons/react/24/solid'
 

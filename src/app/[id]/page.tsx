@@ -1,14 +1,13 @@
 'use client'
+
 import DetailsLabels from '@/components/details/DetailsLabels'
 import Footer from '@/components/details/Footer'
 import ImageCard from '@/components/details/ImageCard'
 import PropertyDescription from '@/components/details/PropertyDescription'
 import PropertyHeader from '@/components/details/PropertyHeader'
-import PriceLabel from '@/components/list/PriceLabel'
 import Spinner from '@/components/ui/Spinner'
 import { GET_PROPERTY_DATA } from '@/graphql'
 import useFilters from '@/hooks/useFilters'
-import useMediaQuery from '@/hooks/useMediaQuery'
 import { useQuery } from '@apollo/client'
 import React, { FC } from 'react'
 
