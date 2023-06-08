@@ -21,7 +21,7 @@ const PriceLabel: FC<{ price: number; variant?: 'normal' | 'large' }> = ({
 			>
 				${formattedPrice}
 			</span>{' '}
-			/ month
+			/ {price > 10 ? 'total' : 'month'}
 		</p>
 	)
 }

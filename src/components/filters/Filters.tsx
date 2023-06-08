@@ -13,7 +13,7 @@ const Filters = () => {
 	const [filtersAreOpen, setFiltersAreOpen] = useState(false)
 
 	return (
-		<div className='flex flex-col border-border pt-2 md:max-h-full md:w-[300px] md:border-r-2 md:pt-8'>
+		<div className='flex flex-col border-border pt-2 md:max-h-full md:w-[300px] md:border-r-2 md:pt-8 xl:w-[320px]'>
 			<div className='relative mx-auto mt-4 w-fit md:mt-0'>
 				<h1 className='text-center'>Filters</h1>
 				{isMobile ? (
@@ -37,7 +37,14 @@ const Filters = () => {
 					<RoomsFilter />
 					<AreaFilter />{' '}
 				</div>
-			) : null}
+			) : (
+				<div className={`hidden ${!isMobile ? 'md:block' : ''}`}>
+					<PropertyTypeFilter />
+					<PriceFilter />
+					<RoomsFilter />
+					<AreaFilter />{' '}
+				</div>
+			)}
 		</div>
 	)
 }

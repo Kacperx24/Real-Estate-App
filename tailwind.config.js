@@ -15,6 +15,7 @@ module.exports = {
 			secondary: { main: '#2e2e2e', light: '#686868', extralight: '#a5a5a5' },
 			border: '#DEDEDE',
 			white: '#ffffff',
+			gold: '#f4cd21',
 		},
 		// fontSize: {
 		// 	xs: '.75rem',

@@ -25,7 +25,7 @@ export const GET_PROPERTIES = gql`
 `
 export const GET_PROPERTIES_FOR_LIST = gql`
 	query RealEstates {
-		realEstates {
+		realEstates(first: 100) {
 			bathrooms
 			id
 			location

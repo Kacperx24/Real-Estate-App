@@ -14,8 +14,10 @@ const PropertyTypeFilter = () => {
 
 	return (
 		<div>
-			<h2 className='text-center'>Property type</h2>
-			<div className='mt-6 flex w-[240px] gap-4'>
+			<h2 className='text-center lg:ml-2 lg:text-left lg:text-[15px]'>
+				Property type
+			</h2>
+			<div className='mt-6 flex w-[240px] gap-4 lg:mt-4'>
 				<button
 					onClick={() => updatePropertyType('house')}
 					className={`property-type-btn ${

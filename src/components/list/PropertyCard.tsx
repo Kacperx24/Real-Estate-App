@@ -46,7 +46,7 @@ const PropertyCard: FC<{ data: PropertyDataForList }> = ({ data }) => {
 					priority
 				/>
 			</div>
-			<div className='w-0 flex-grow p-2 pt-1 lg:p-[10px]'>
+			<div className='w-0 flex-grow p-1 lg:p-[10px]'>
 				<PriceLabel
 					price={transactionType === 'rent' ? rentPrice : purchasePrice}
 				/>

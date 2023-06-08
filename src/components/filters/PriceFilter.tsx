@@ -27,7 +27,7 @@ const PriceFilter = () => {
 		filters: { transactionType },
 	} = useFilters()
 
-	const [minMaxValue, setMinMaxValue] = useState({ min: 500, max: 5000 })
+	const [minMaxValue, setMinMaxValue] = useState({ min: 500, max: 10000 })
 
 	useEffect(() => {
 		updateFilter('minPrice', minMaxValue.min)
@@ -37,20 +37,22 @@ const PriceFilter = () => {
 	useEffect(() => {
 		setMinMaxValue(
 			transactionType === 'rent'
-				? { min: 500, max: 5000 }
-				: { min: 80000, max: 750000 }
+				? { min: 500, max: 10000 }
+				: { min: 80000, max: 1500000 }
 		)
 	}, [transactionType])
 
 	return (
 		<div className='mt-8'>
-			<h2 className='text-center'>Price range</h2>
+			<h2 className='text-center lg:ml-2 lg:text-left lg:text-[15px]'>
+				Price range
+			</h2>
 			<div className='mt-6 flex w-[240px] gap-4'>
 				<MultiRangeInput
 					minMaxValue={minMaxValue}
 					setMinMaxValue={setMinMaxValue}
 					min={transactionType === 'rent' ? 500 : 80000}
-					max={transactionType === 'rent' ? 5000 : 750000}
+					max={transactionType === 'rent' ? 10000 : 1500000}
 					step={transactionType === 'rent' ? 100 : 10000}
 				/>
 			</div>

@@ -16,13 +16,10 @@ const List = () => {
 	const { filterData } = useFilters()
 
 	const filteredData = filterData(data?.realEstates)
-	// const filteredData = data?.realEstates
 
 	const router = useRouter()
 
 	useEffect(() => {
-		console.log(filteredData)
-
 		if (filteredData && !isMobile) router.push(`/${filteredData[0].id}`)
 	}, [data])
 

@@ -44,7 +44,9 @@ const AreaFilter = () => {
 
 	return (
 		<div className='mt-8'>
-			<h2 className='text-center'>Price range</h2>
+			<h2 className='text-center lg:ml-2 lg:text-left lg:text-[15px]'>
+				Area range
+			</h2>
 			<div className='mt-6 flex w-[240px] gap-4'>
 				<MultiRangeInput
 					minMaxValue={minMaxValue}

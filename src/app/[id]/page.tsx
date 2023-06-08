@@ -1,5 +1,6 @@
 'use client'
 import DetailsLabels from '@/components/details/DetailsLabels'
+import Footer from '@/components/details/Footer'
 import ImageCard from '@/components/details/ImageCard'
 import PropertyDescription from '@/components/details/PropertyDescription'
 import PropertyHeader from '@/components/details/PropertyHeader'
@@ -42,6 +43,7 @@ const DetailsPage: FC<{ params: { id: string } }> = ({ params: { id } }) => {
 				/>
 				<DetailsLabels rooms={rooms} squareMeters={squareMeters} />
 				<PropertyDescription description={description} />
+				<Footer />
 			</div>
 		</>
 	)
