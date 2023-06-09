@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Real Estate App
 
-## Getting Started
+This is a real estate application built using React with TypeScript and GraphQL. The application allows users to browse, filter, and view details of various properties.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+__Browse properties:__ Users can browse through a list of available properties, including houses and apartments.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+__Filter properties:__ Users can filter properties based on different criteria such as property type, price range, number of rooms, and square meters.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+__Search properties__: Users can search for specific properties by entering keywords or location in the search bar.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+__View property details:__ Users can click on a property to view its detailed information.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Getting started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run this project locally, please follow these steps:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository.
 
-## Deploy on Vercel
+```git clone https://github.com/Kacperx24/Real-Estate-App.git```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```cd Real-Estate-App```
+
+3. Install the dependencies.
+
+```npm install```
+
+4. Start the development server.
+
+```npm run dev```
+
+5. Open your browser and visit http://localhost:3000 to view the application.
+
+
+## Technologies Used
+
+- React
+- Next.js
+- TypeScript
+- GraphQL
+- TailwindCSS
+
+## Key Takeaways
+
+1. While working on the project, I became more familiar with the app directory structure in Next.js.
+2. I gained hands-on experience with both server-side and client-side components, which greatly enhanced my understanding of their practical use.
+3. I honed my skills in creating GraphQL queries.
+4. I learned how to utilize Tailwind CSS for styling and design.
+
+
+
