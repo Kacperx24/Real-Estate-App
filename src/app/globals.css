@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-	--foreground-rgb: 0, 0, 0;
-	--background-start-rgb: 214, 219, 220;
-	--background-end-rgb: 255, 255, 255;
-} */
-
 @layer components {
 	.property-type-btn {
 		@apply flex h-20 w-0 flex-grow flex-col items-center justify-center gap-1 rounded-lg bg-white text-sm text-secondary-light;
