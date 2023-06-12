@@ -11,7 +11,7 @@ import useFilters from '@/hooks/useFilters'
 import Spinner from '../ui/Spinner'
 
 const List = () => {
-	const { data, loading, error } = useQuery(GET_PROPERTIES_FOR_LIST)
+	const { data, loading } = useQuery(GET_PROPERTIES_FOR_LIST)
 	const isMobile = useMediaQuery()
 	const { filterData } = useFilters()
 
@@ -25,10 +25,11 @@ const List = () => {
 
 	if (loading)
 		return (
-			<div className='w-full max-w-[410px]'>
+			<div className='w-full max-w-[410px] lg:max-w-[430px]'>
 				<Spinner />
 			</div>
 		)
+
 	return (
 		<div className='flex w-full max-w-[410px] flex-col border-border pt-8 md:ml-6 md:max-h-full md:border-r-2 lg:max-w-[430px]'>
 			<h2 className='text-center'>Search results ({filteredData?.length})</h2>

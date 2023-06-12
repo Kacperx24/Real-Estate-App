@@ -3,7 +3,9 @@ import { useEffect, useState } from 'react'
 const MOBILE_SCREEN_WIDTH = 768
 
 function useMediaQuery() {
-	const [isMobile, setIsMobile] = useState(true)
+	const [isMobile, setIsMobile] = useState(
+		window.innerWidth < MOBILE_SCREEN_WIDTH
+	)
 
 	useEffect(() => {
 		const checkDeviceType = () => {
